@@ -41,7 +41,6 @@ case $num1 in
   ;;
  5)
   echo -e "----------当前系统版本如下----------" && cat /etc/issue
-  menu
   ;;  
 esac
 }
