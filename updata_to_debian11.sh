@@ -40,7 +40,7 @@ case $num1 in
   echo -e "----------更新当前系统版本软件包----------" && apt-get update && apt-get upgrade -y && apt-get dist-upgrade && echo -e "----------删除未使用的依赖项----------" && apt --purge autoremove && cp -i /etc/apt/sources.list /etc/apt/sources.list.original && sed -i 's/buster/bullseye/g' /etc/apt/sources.list && echo -e "----------更新到 Debian 11----------" && apt-get update && apt-get upgrade -y && apt-get dist-upgrade && echo -e "----------脚本执行完毕，请自行重启系统应用新版本（以防万一，建议备份重要文件）----------"
   ;;
  5)
-  echo -e "----------当前系统版本如下----------" && cat /etc/issue && menu
+  echo -e "----------当前系统版本如下----------" && cat /etc/issue
   ;;  
 esac
 }
