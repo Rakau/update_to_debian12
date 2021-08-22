@@ -5,7 +5,7 @@ if [ $(whoami) != "root" ];then
 fi
 
 if [ `grep -c "Debian" /etc/issue` -ne '0' ];then
-                echo "----------此脚本不支持此系统！----------"
+        echo "----------此脚本不支持此系统！----------"
 	exit 1;
 fi
 
