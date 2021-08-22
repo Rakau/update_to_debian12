@@ -24,19 +24,19 @@ read -p "请输入对应地区数字：" num1
 case $num1 in
  1)
   echo "你选择了Debian 7"
-  echo -e "----------更新当前系统版本软件包----------" && apt update && apt upgrade -y && echo -e "----------删除未使用的依赖项----------" && apt --purge autoremove && cp -i /etc/apt/sources.list /etc/apt/sources.list.original && sed -i 's/wheezy/bullseye/g' /etc/apt/sources.list && echo -e "----------更新到 Debian 11----------" && apt update && apt full-upgrade && echo -e "----------脚本执行完毕，请自行重启系统应用新版本（以防万一，建议备份重要文件）----------"
+  echo -e "----------更新当前系统版本软件包----------" && apt-get update && apt-get upgrade -y && apt-get dist-upgrade && echo -e "----------删除未使用的依赖项----------" && apt --purge autoremove && cp -i /etc/apt/sources.list /etc/apt/sources.list.original && sed -i 's/wheezy/bullseye/g' /etc/apt/sources.list && echo -e "----------更新到 Debian 11----------" && apt-get update && apt-get upgrade -y && apt-get dist-upgrade && echo -e "----------脚本执行完毕，请自行重启系统应用新版本（以防万一，建议备份重要文件）----------"
   ;;
  2)
   echo "你选择了Debian 8"
-  echo -e "----------更新当前系统版本软件包----------" && apt update && apt upgrade -y && echo -e "----------删除未使用的依赖项----------" && apt --purge autoremove && cp -i /etc/apt/sources.list /etc/apt/sources.list.original && sed -i 's/jessie/bullseye/g' /etc/apt/sources.list && echo -e "----------更新到 Debian 11----------" && apt update && apt full-upgrade && echo -e "----------脚本执行完毕，请自行重启系统应用新版本（以防万一，建议备份重要文件）----------"
+  echo -e "----------更新当前系统版本软件包----------" && apt-get update && apt-get upgrade -y && apt-get dist-upgrade && echo -e "----------删除未使用的依赖项----------" && apt --purge autoremove && cp -i /etc/apt/sources.list /etc/apt/sources.list.original && sed -i 's/jessie/bullseye/g' /etc/apt/sources.list && echo -e "----------更新到 Debian 11----------" && apt-get update && apt-get upgrade -y && apt-get dist-upgrade && echo -e "----------脚本执行完毕，请自行重启系统应用新版本（以防万一，建议备份重要文件）----------"
   ;;
  3)
   echo "你选择了Debian 9"
-  echo -e "----------更新当前系统版本软件包----------" && apt update && apt upgrade -y && echo -e "----------删除未使用的依赖项----------" && apt --purge autoremove && cp -i /etc/apt/sources.list /etc/apt/sources.list.original && sed -i 's/stretch/bullseye/g' /etc/apt/sources.list && echo -e "----------更新到 Debian 11----------" && apt update && apt full-upgrade && echo -e "----------脚本执行完毕，请自行重启系统应用新版本（以防万一，建议备份重要文件）----------"
+  echo -e "----------更新当前系统版本软件包----------" && apt-get update && apt-get upgrade -y && apt-get dist-upgrade && echo -e "----------删除未使用的依赖项----------" && apt --purge autoremove && cp -i /etc/apt/sources.list /etc/apt/sources.list.original && sed -i 's/stretch/bullseye/g' /etc/apt/sources.list && echo -e "----------更新到 Debian 11----------" && apt-get update && apt-get upgrade -y && apt-get dist-upgrade && echo -e "----------脚本执行完毕，请自行重启系统应用新版本（以防万一，建议备份重要文件）----------"
   ;;
  4)
   echo "你选择了Debian 10"
-  echo -e "----------更新当前系统版本软件包----------" && apt update && apt upgrade -y && echo -e "----------删除未使用的依赖项----------" && apt --purge autoremove && cp -i /etc/apt/sources.list /etc/apt/sources.list.original && sed -i 's/buster/bullseye/g' /etc/apt/sources.list && echo -e "----------更新到 Debian 11----------" && apt update && apt full-upgrade && echo -e "----------脚本执行完毕，请自行重启系统应用新版本（以防万一，建议备份重要文件）----------"
+  echo -e "----------更新当前系统版本软件包----------" && apt-get update && apt-get upgrade -y && apt-get dist-upgrade && echo -e "----------删除未使用的依赖项----------" && apt --purge autoremove && cp -i /etc/apt/sources.list /etc/apt/sources.list.original && sed -i 's/buster/bullseye/g' /etc/apt/sources.list && echo -e "----------更新到 Debian 11----------" && apt-get update && apt-get upgrade -y && apt-get dist-upgrade && echo -e "----------脚本执行完毕，请自行重启系统应用新版本（以防万一，建议备份重要文件）----------"
   ;;
 esac
 }
