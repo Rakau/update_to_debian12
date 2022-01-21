@@ -34,7 +34,7 @@ case $num1 in
   ;;
   esac
 }
-
+menu
 function or_menu ()
 {
  cat << EOF
