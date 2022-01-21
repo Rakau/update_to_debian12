@@ -9,7 +9,7 @@ if [ `grep -c "Debian" /etc/issue` -eq '0' ];then
 	exit 1;
 fi
 
-function menu ()
+function menu()
 {
   cat << EOF
 ----------------------------------------
@@ -33,8 +33,7 @@ case $num1 in
   exit 1;
   esac
 }
-
-function or_menu ()
+function or_menu()
 {
  cat << EOF
 ----------------------------------------
