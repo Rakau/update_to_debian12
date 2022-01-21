@@ -27,7 +27,7 @@ case $num1 in
   ;;
  2)
   echo "保留原版源进行升级"
-  or_memu
+  or_menu
   ;;
  3)
   exit 1;
