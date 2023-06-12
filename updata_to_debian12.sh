@@ -23,7 +23,7 @@ read -p "请输入对应版本菜单数字：" num1
 case $num1 in
  1)
   echo "直接更换官方源进行升级"
-  echo -e "----------更新当前系统版本软件包----------" && apt update && apt upgrade -y && echo -e "----------删除未使用的依赖项----------" && apt --purge autoremove && cp -i /etc/apt/sources.list /etc/apt/sources.list.original && rm /etc/apt/sources.list && touch /etc/apt/sources.list && echo -e "deb http://deb.debian.org/debian bookworm main contrib non-free\ndeb-src http://deb.debian.org/debian bookworm main\ndeb http://deb.debian.org/debian-security/ bookworm-security main\ndeb-src http://deb.debian.org/debian-security/ bookworm-security main\ndeb http://deb.debian.org/debian bookworm-updates main\ndeb-src http://deb.debian.org/debian bookworm-updates main">/etc/apt/sources.list && echo -e "----------更新到 Debian 12----------" && apt update && apt full-upgrade && echo -e "----------脚本执行完毕，请自行重启系统应用新版本（以防万一，建议备份重要文件）----------"
+  echo -e "----------更新当前系统版本软件包----------" && apt update && apt upgrade -y && echo -e "----------删除未使用的依赖项----------" && apt --purge autoremove && cp -i /etc/apt/sources.list /etc/apt/sources.list.original && rm /etc/apt/sources.list && touch /etc/apt/sources.list && echo -e "deb http://deb.debian.org/debian bookworm main contrib non-free\ndeb-src http://deb.debian.org/debian bookworm main\ndeb http://deb.debian.org/debian-security/ bookworm-security main\ndeb-src http://deb.debian.org/debian-security/ bookworm-security main\ndeb http://deb.debian.org/debian bookworm-updates main\ndeb-src http://deb.debian.org/debian bookworm-updates main">/etc/apt/sources.list && echo -e "----------更新到 Debian 12----------" && apt update && apt full-upgrade -y && echo -e "----------脚本执行完毕，请自行重启系统应用新版本（以防万一，建议备份重要文件）----------"
   ;;
  2)
   echo "保留原版源进行升级"
@@ -51,19 +51,19 @@ read -p "请输入对应版本菜单数字：" num1
 case $num1 in
  1)
   echo "你选择了Debian 8"
-  echo -e "----------删除未使用的依赖项----------" && apt --purge autoremove && cp -i /etc/apt/sources.list /etc/apt/sources.list.original && sed -i 's/wheezy/bookworm/g' /etc/apt/sources.list && echo -e "----------更新到 Debian 12----------" && apt-get update && apt-get upgrade -y && apt-get dist-upgrade && echo -e "----------脚本执行完毕，请自行重启系统应用新版本（以防万一，建议备份重要文件）----------"
+  echo -e "----------删除未使用的依赖项----------" && apt --purge autoremove && cp -i /etc/apt/sources.list /etc/apt/sources.list.original && sed -i 's/jessie/bookworm/g' /etc/apt/sources.list && echo -e "----------更新到 Debian 12----------" && apt-get update && apt-get upgrade -y && apt-get dist-upgrade && echo -e "----------脚本执行完毕，请自行重启系统应用新版本（以防万一，建议备份重要文件）----------"
   ;;
  2)
   echo "你选择了Debian 9"
-  echo -e "----------删除未使用的依赖项----------" && apt --purge autoremove && cp -i /etc/apt/sources.list /etc/apt/sources.list.original && sed -i 's/jessie/bookworm/g' /etc/apt/sources.list && echo -e "----------更新到 Debian 12----------" && apt-get update && apt-get upgrade -y && apt-get dist-upgrade && echo -e "----------脚本执行完毕，请自行重启系统应用新版本（以防万一，建议备份重要文件）----------"
+  echo -e "----------删除未使用的依赖项----------" && apt --purge autoremove && cp -i /etc/apt/sources.list /etc/apt/sources.list.original && sed -i 's/stretch/bookworm/g' /etc/apt/sources.list && echo -e "----------更新到 Debian 12----------" && apt-get update && apt-get upgrade -y && apt-get dist-upgrade && echo -e "----------脚本执行完毕，请自行重启系统应用新版本（以防万一，建议备份重要文件）----------"
   ;;
  3)
   echo "你选择了Debian 10"
-  echo -e "----------删除未使用的依赖项----------" && apt --purge autoremove && cp -i /etc/apt/sources.list /etc/apt/sources.list.original && sed -i 's/stretch/bookworm/g' /etc/apt/sources.list && echo -e "----------更新到 Debian 12----------" && apt-get update && apt-get upgrade -y && apt-get dist-upgrade && echo -e "----------脚本执行完毕，请自行重启系统应用新版本（以防万一，建议备份重要文件）----------"
+  echo -e "----------删除未使用的依赖项----------" && apt --purge autoremove && cp -i /etc/apt/sources.list /etc/apt/sources.list.original && sed -i 's/buster/bookworm/g' /etc/apt/sources.list && echo -e "----------更新到 Debian 12----------" && apt-get update && apt-get upgrade -y && apt-get dist-upgrade && echo -e "----------脚本执行完毕，请自行重启系统应用新版本（以防万一，建议备份重要文件）----------"
   ;;
  4)
   echo "你选择了Debian 11"
-  echo "----------删除未使用的依赖项----------" && apt --purge autoremove && cp -i /etc/apt/sources.list /etc/apt/sources.list.original && sed -i 's/buster/bookworm/g' /etc/apt/sources.list && echo -e "----------更新到 Debian 12----------" && apt-get update && apt-get upgrade -y && apt-get dist-upgrade && echo -e "----------脚本执行完毕，请自行重启系统应用新版本（以防万一，建议备份重要文件）----------"
+  echo "----------删除未使用的依赖项----------" && apt --purge autoremove && cp -i /etc/apt/sources.list /etc/apt/sources.list.original && sed -i 's/bullseye/bookworm/g' /etc/apt/sources.list && echo -e "----------更新到 Debian 12----------" && apt-get update && apt-get upgrade -y && apt-get dist-upgrade && echo -e "----------脚本执行完毕，请自行重启系统应用新版本（以防万一，建议备份重要文件）----------"
   ;;
  5)
   echo -e "----------当前系统版本如下----------" && cat /etc/issue
